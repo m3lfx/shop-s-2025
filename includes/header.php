@@ -56,13 +56,13 @@
         <?php
         if (!isset($_SESSION['user_id'])) {
           echo "<div class='navbar-nav ms-auto'>
-                        <a href='http://{$_SERVER['SERVER_NAME']}/shop-ns-2025/user/login.php'  class='nav-item nav-link'>Login</a></div>";
+                        <a href='http://{$_SERVER['SERVER_NAME']}/shop-s-2025/user/login.php' class='nav-item nav-link'>Login</a></div>";
         } else {
           echo "<li class='nav-item'>
            <p>{$_SESSION['email']}</p>
           </li>";
           echo "<div class='navbar-nav ms-auto'>
-                        <a href='http://{$_SERVER['SERVER_NAME']}/shop-ns-2025/user/logout.php'  class='nav-item nav-link'>Logout</a></div>";
+                        <a href='http://{$_SERVER['SERVER_NAME']}/shop-s-2025/user/logout.php'  class='nav-item nav-link'>Logout</a></div>";
         }
         ?>
       </div>

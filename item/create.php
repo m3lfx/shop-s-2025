@@ -16,6 +16,7 @@ include('../includes/config.php');
                     id="name"
                     placeholder="Enter item name"
                     name="description"
+                    
                     value="<?php
                             if (isset($_SESSION['desc']))
                                 echo $_SESSION['desc'];

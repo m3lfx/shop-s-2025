@@ -31,7 +31,7 @@ $itemCount = mysqli_num_rows($result);
 <body>
     <a href="create.php" class="btn btn-primary btn-lg " role="button" aria-disabled="true">Add Item</a></p>
     <h2>number of items <?=$itemCount ?> </h2>
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered ">
         <?php
         while ($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";

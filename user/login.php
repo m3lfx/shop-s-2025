@@ -4,10 +4,10 @@ session_start();
 include("../includes/header.php");
 include("../includes/config.php");
 if (isset($_POST['submit'])) {
-  
+  var_dump(htmlentities($_POST['password']));
     $email = trim($_POST['email']);
     $pass = sha1(trim($_POST['password']));
-    $sql = "SELECT user_id, email, role FROM users WHERE email=? AND password=? LIMIT 1";
+    $sql = "SELECT id, email, role FROM users WHERE email=? AND password=? LIMIT 1";
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, 'ss', $email, $pass);
     mysqli_stmt_execute($stmt);

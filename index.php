@@ -8,7 +8,7 @@ print_r($_SESSION);
 if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"]) > 0) {
     echo '<div class="cart-view-table-front" id="view-cart">';
     echo '<h3>Your Shopping Cart</h3>';
-    echo '<form method="POST" action="cart_update.php">';
+    echo '<form method="POST" action="./cart/cart_update.php">';
     echo '<table width="100%"  cellpadding="6" cellspacing="0">';
     echo '<tbody>';
     $total = 0;
@@ -28,7 +28,7 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"]) > 0) {
         $total += $subtotal;
     }
     echo '<td colspan="4">';
-    echo '<button type="submit">Update</button><a href="view_cart.php" class="button">Checkout</a>';
+    echo '<button type="submit">Update</button><a href="./cart/view_cart.php" class="button">Checkout</a>';
     echo '</td>';
     echo '</tbody>';
     echo '</table>';
@@ -46,7 +46,7 @@ if ($results) {
     while ($row = mysqli_fetch_assoc($results)) {
         $products_item .= <<<EOT
      <li class="product">
-    <form method="POST" action="cart_update.php">
+    <form method="POST" action="./cart/cart_update.php">
     <div class="product-content"><h3>{$row['description']}</h3>
     <div class="product-thumb"><img src="./item/{$row['img_path']}" width="50px" height="50px"></div>
     <div class="product-info">

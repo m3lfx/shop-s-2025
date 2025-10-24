@@ -41,8 +41,10 @@ try {
         mysqli_stmt_execute($stmt3);
         mysqli_commit($conn);
         unset($_SESSION['cart_products']);
+        header('Location: ../index.php');
     }
 } catch (mysqli_sql_exception $e) {
     echo $e->getMessage();
     mysqli_rollback($conn);
 }
+

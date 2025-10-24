@@ -29,14 +29,14 @@
           <li class="nav-item dropdown">
             <?php if (isset($_SESSION['user_id'])) {
               echo '<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+             Admin
             </a>';
 
               echo '<ul class="dropdown-menu">';
               if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-                echo "<li><a class='dropdown-item' href='../item/index.php'>item</a></li>";
-                echo "<li><a class='dropdown-item' href='../admin/orders.php'>orders</a></li>";
-                echo "<li><a class='dropdown-item' href='../admin/users.php'>Users</a></li>";
+                echo "<li><a class='dropdown-item' href='/shop-s-2025/admin/index.php'>item</a></li>";
+                echo "<li><a class='dropdown-item' href='/shop-s-2025/admin/orders.php'>orders</a></li>";
+                echo "<li><a class='dropdown-item' href='/shop-s-2025/admin/users.php'>Users</a></li>";
               } else {
                 echo '<li><a class="dropdown-item" href="./user/profile.php">profile</a></li>';
                 echo '<li><a class="dropdown-item" href="../user/myorders.php"> My Orders</a></li>';

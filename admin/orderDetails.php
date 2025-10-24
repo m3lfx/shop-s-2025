@@ -50,9 +50,9 @@ $items = mysqli_query($conn, $sql);
 <form action="updateOrder.php" method="POST">
 <select class="form-select form-control" aria-label="Default select example" name="status">
     <option selected>Open this select menu</option>
-    <option value="Processing">processing</option>
-    <option value="Delivered">delivered</option>
-    <option value="Canceled">canceled</option>
+    <option value="processing">processing</option>
+    <option value="delivered">delivered</option>
+    <option value="canceled">canceled</option>
 </select>
 <button type="submit" class="btn btn-primary">update order</button>
 </form>

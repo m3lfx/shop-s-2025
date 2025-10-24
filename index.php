@@ -28,14 +28,15 @@ if(isset($_SESSION["cart_products"]) && count($_SESSION["cart_products"]) > 0) {
         $total += $subtotal;
     }
     echo '<td colspan="4">';
-    echo '<button type="submit">Update</button><a href="./cart/view_cart.php" class="button">Checkout</a>';
+    echo '<button type="submit">Update</button>
+    <a href="./cart/view_cart.php" class="button">Checkout</a>';
     echo '</td>';
     echo '</tbody>';
     echo '</table>';
     echo "</form>";
     echo '</div>';
 }
-$sql = "SELECT i.item_id AS itemId, description, img_path, sell_price FROM item i INNER JOIN stock s USING (item_id)  ORDER BY i.item_id ASC";
+$sql = "SELECT i.item_id AS itemId, description, img_path, sell_price, quantity FROM item i INNER JOIN stock s USING (item_id)  ORDER BY i.item_id ASC";
 
 $results = mysqli_query($conn, $sql);
 
@@ -55,7 +56,7 @@ if ($results) {
     
     <label>
         <span>Quantity</span>
-        <input type="number" size="2" maxlength="2" name="item_qty" value="1" />
+        <input type="number" size="2" maxlength="2" name="item_qty" value="1" max={$row['quantity']} />
     </label>
     </fieldset>
     <input type="hidden" name="item_id" value="{$row['itemId']}" />

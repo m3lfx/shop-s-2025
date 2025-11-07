@@ -35,19 +35,19 @@ date_default_timezone_set('Asia/Manila');
 // print $test[0]; // prints "s"
 // print $test[2];
 
-// $membership = 'tesst';
+// $membership = 'tests';
 // if ( strlen( $membership ) === 4 )
 // print "Thank you!";
 // else
 // print "Your membership number must have 4 digits<P>";
 
-// // $membership = "mz00xyz";
-// // if ( strpos($membership, "mzc") === 0 )
-// // print "hello mz";
+// $membership = "mz00xyz";
+// if ( strpos($membership, "mzc") === 0 )
+// print "hello mz";
 
-// // $test = "scallywag";
-// // print substr($test,-6,3); // prints "wag"
-// // print substr($test,6,2);
+// $test = "scallywag";
+// print substr($test,-6,3); // prints "wag"
+// // print substr($test,-2);
 
 // $test = "matt@corrosive.co.uk";
 // if ( $test = substr( $test, -6 ) === ".co.uk" )
@@ -66,15 +66,15 @@ date_default_timezone_set('Asia/Manila');
 //  }
 //  print( $test);
 
-// //  $text = "\t\t\tlots of room to breath ";
-// //  print "<pre>{$text}</pre>";
-// // $text = trim( $text );
-// // print $text;
+//  $text = "\t\t\tlots of room to breath ";
+//  print "<pre>{$text}</pre>";
+// $text = trim( $text );
+// print $text;
 
-// // $membership = "mz99xyz";
-// // print $membership;
-// // $membership = substr_replace( $membership, "00", 2, 1 );
-// // print "New membership number: $membership<p>";
+// $membership = "mz99xyz";
+// print $membership;
+// $membership = substr_replace( $membership, "00fdsfsfs", 2, 2 );
+// print "New membership number: $membership<p>";
 
 // $string = "Site g@g0 g@g0 duck. buck clock socks packs u ";
 // $string .= "The g@g0 Guide to All Things Good in Europe";
@@ -100,6 +100,7 @@ date_default_timezone_set('Asia/Manila');
 // print $full_name;
 
 // $start_date = "TUPT-24-0438";
+// // $start_date = "2025-07-11";
 // $date_array = explode("-", $start_date);
 // print $date_array[0]. "<br>" ;
 // print $date_array[1]. "<br>" ;
@@ -108,43 +109,43 @@ date_default_timezone_set('Asia/Manila');
 // TUPT-24-0438
 
 // print "<pre>\n";
-// print preg_match("/aaR/", "aardvark aadvocacy", $array) . "\n";
+// print preg_match("/aaR/i", "aardvark aadvocacy", $array) . "\n";
 // print_r( $array );
 // print "</pre>\n";
 
-// if ( preg_match("/b*/","zbcda", $array) ) {
+// if ( preg_match("/b?/","bcda", $array) ) {
 //     print "<pre>\n";
 //     print_r( $array );
 //     print "</pre>\n";
 //     }
 
 // $text = "pot post pat patent";
-// if (preg_match_all( "/po+t/", $text, $array ) ) {
+// if (preg_match_all( "/p.+t/", $text, $array ) ) {
 // print "<pre>\n";
 // print_r( $array );
 // print "</pre>\n";
 // }
 
-// $text = "pot post pats patent";
+// $text = "pot post pat pastent";
 // if (preg_match("/^p.+s/", $text, $array)) {
 //     print "<pre>\n";
 //     print_r($array);
 //     print "</pre>\n";
 // }
 
-// if (preg_match("/^[a-z 0-9_]+.?/", " AB dkfd773sxFF", $array)) {
+// if (preg_match("/^[a-z]+/", "AB dkfd773sxFF", $array)) {
 //     print "<pre>\n";
 //     print_r($array);
 //     print "</pre>\n";
 // }
 
-// if ( preg_match("/^[^A-Z347]+/","AB dkfd773sxFF", $array) ) {
+// if ( preg_match("/^[^A-Z347]+/","dkfAd773sxFF", $array) ) {
 //     print "<pre>\n";
 //     print_r( $array );
 //     print "</pre>\n";
 //     }
 // [A-Za-z0-9_] === \w
-// if ( preg_match("/^p[^a-z34]+/","pB dkfd773sxFF", $array) ) {
+// if ( preg_match("/^p\w+/","pB dkfd773sxFF", $array) ) {
 //     print "<pre>\n";
 //     print_r( $array );
 //     print "</pre>\n";
@@ -180,20 +181,20 @@ $text = "pot post pat patent";
 // print "</pre>\n";
 // }
 
-// $test = "TUPT-023-0909";
-// if ( preg_match( "/^[A-Z]+-\d{2}-\d{4}$/", $test, $array ) ) {
+// $test = "TUPT-234-0909";
+// if ( preg_match( "/^[A-Z]+-\d{2,3}-\d{4}$/", $test, $array ) ) {
 // print "<pre>\n";
 // print_r( $array );
 // print "</pre>\n";
 // }
 
-// $test = "www.example.co.uk";
+// $test = "www.example.com";
 // if ( preg_match( "/www\.example(\.com|\.co\.uk)/", $test, $array ) ) {
 // print "it is a $array[1] domain<br/>";
 // }
 
 // $text = "I sell pots, plants, pistachios, pianos and parrots";
-// if ( preg_match( "/\bp\w+s\b/", $text, $array ) ) {
+// if ( preg_match_all( "/\bp\w+s\b/", $text, $array ) ) {
 // print "<pre>\n";
 // print_r( $array );
 // print "</pre>\n";
@@ -223,14 +224,14 @@ $text = "pot post pat patent";
 // }
 
 // $text = "start with this line\nand you will reach\na conclusion in the end\n";
-// if ( preg_match( "/^(\w+).*?(\w+)$/s", $text, $array ) ) {
+// if ( preg_match( "/^(\w+).*(\w+)$/s", $text, $array ) ) {
 // print "<pre>\n";
 // print_r( $array );
 // print "</pre>\n";
 // }
 
 // $text = "apples, oranges, peaches and grapefruit";
-// $fruitarray = preg_split("/,|and/", $text );
+// $fruitarray = preg_split("/,| and /", $text );
 // print "<pre>\n";
 // print_r( $fruitarray );
 // print "</pre>\n";
@@ -247,4 +248,4 @@ $text = "pot post pat patent";
 // }, $dates);
 // print $dates;
 
-// /[\w+\.]+@(tup.edu.ph)$/
+// /[\w+\.]+_[\w+\.]+@(tup.edu.ph)$/
